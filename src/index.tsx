@@ -4,11 +4,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// @ts-ignore
+const shadowRoot = document.getElementsByTagName("combobox-webcomponent")[0].shadowRoot.getElementById('component-root');
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <React.StrictMode>
+        <App/>
+    </React.StrictMode>,
+    shadowRoot
 );
 
 // If you want to start measuring performance in your app, pass a function
